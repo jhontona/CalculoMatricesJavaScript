@@ -1,16 +1,100 @@
 <!DOCTYPE html>
 <html>
-	<head>		
+	<head>
+		<meta charset="utf-8">
+		<title>Calculo Matrices</title>
+		<link href="css/bootstrap.min.css" rel="stylesheet">
 		<script src="js/jquery-1.11.1.min.js"></script>
 		<script src="js/bootstrap.min.js"></script>
-		<meta charset="UTF8" />
-		<title>Calculo Matrices</title>
+		<script type="text/javascript">
+		</script>
+		<script type="text/javascript" src="js/calculo.js"></script>		
 	</head>
 	<body>
-		<h1>Cálculo de matrices</h1>
-		<div class="row">
-			<div class="col-md-6 table-bordered"></div>
-  			<div class="col-md-6 table-bordered"></div>
+		<div class="container">
+			<h1>Cálculo de matrices</h1>
+			<div class="col-xs-6">
+				<h3>Matriz de 2X2</h3><br/>
+				<div class="table">
+					<div class="row">
+  						<div class="col-xs-4">
+    						<input type="number" class="form-control" placeholder="X1" id="x12">
+  						</div>
+						<div class="col-xs-4">
+	    					<input type="number" class="form-control" placeholder="Y1" id="y12">
+	  					</div>
+	  					<div class="col-xs-4">
+	    					<input type="number" class="form-control" placeholder="R1" id="r12">
+	  					</div>
+					</div>
+					<div class="row">
+  						<div class="col-xs-4">
+    						<input type="number" class="form-control" placeholder="X2" id="x22">
+  						</div>
+						<div class="col-xs-4">
+	    					<input type="number" class="form-control" placeholder="Y2" id="y22">
+	  					</div>
+	  					<div class="col-xs-4">
+	    					<input type="number" class="form-control" placeholder="R2" id="r22">
+	  					</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary btn-lg" onclick="calcularMatriz2X2()">
+					<span class="glyphicon glyphicon-pencil"></span> Cálcular matriz de 2X2
+				</button>
+				<div id="resultado2x2"></div>
+			</div>				
+  			<div class="col-xs-6">
+  				<h3>Matriz de 3X3</h3><br/>
+  				<div class="table">
+	  				<div class="row">
+  						<div class="col-xs-3">
+    						<input type="number" class="form-control" placeholder="X1" id="x13">
+  						</div>
+						<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="Y1" id="y13">
+	  					</div>
+	  					<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="Z1" id="z13">
+	  					</div>
+	  					<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="R1" id="r13">
+	  					</div>
+					</div>
+					<div class="row">
+  						<div class="col-xs-3">
+    						<input type="number" class="form-control" placeholder="X2" id="x23">
+  						</div>
+						<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="Y2" id="y23">
+	  					</div>
+	  					<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="Z2" id="z23">
+	  					</div>
+	  					<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="R2" id="r23">
+	  					</div>
+					</div>
+					<div class="row">
+  						<div class="col-xs-3">
+    						<input type="number" class="form-control" placeholder="X3" id="x33">
+  						</div>
+						<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="Y3" id="y33">
+	  					</div>
+	  					<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="Z3" id="z33">
+	  					</div>
+	  					<div class="col-xs-3">
+	    					<input type="number" class="form-control" placeholder="R3" id="r33">
+	  					</div>
+					</div>
+				</div>
+				<button type="button" class="btn btn-primary btn-lg" onclick="calcularMatriz3X3()">
+					<span class="glyphicon glyphicon-pencil"></span> Cálcular matriz de 3X3
+				</button>
+				<div id="resultado3x3"></div>
+  			</div>
 		</div>
 	</body>
 </html>
